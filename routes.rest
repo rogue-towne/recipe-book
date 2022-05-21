@@ -1,0 +1,10 @@
+POST http://localhost:3000/user
+content-type: application/json
+
+{
+    "username": "wassup",
+    "password": "password"
+    
+}
+###
+GET http://localhost:3000/user
