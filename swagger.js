@@ -5,10 +5,8 @@ const doc = {
     title: 'User Api',
     description: 'Includes account information such as Username and Password for users.',
   },
-  host: 'localhost:3000',
-  schemes: ['http']
-  // host: 'cse341course.herokuapp.com',
-  // schemes: ['https'],
+  host: 'recipe-book-cse341.herokuapp.com',
+  schemes: ['https']
 };
 
 const outputFile = './swagger.json';
