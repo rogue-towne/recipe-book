@@ -3,9 +3,6 @@ const app = express()
 const mongoose = require('mongoose')
 require('dotenv').config()
 
-
-
-
 const port = 3000;
 app.listen(port, () => {
     console.log(`Running on port ${port}`)
@@ -21,3 +18,7 @@ const router = require('./routes/index')
 //This always needs to be put before app.use('/', router), or you'll get a type error.
 app.use(express.json())
 app.use('/', router)
+
+const swaggerUI = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
+app.use('/api-docs',swaggerUI.serve, swaggerUI.setup(swaggerDocument))
