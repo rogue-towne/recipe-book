@@ -9,7 +9,7 @@ content-type: application/json
 ###
 GET http://localhost:3000/user
 ###
-PUT http://localhost:3000/user/62918798dd40c51aac3fdea9
+PUT http://localhost:3000/user/62927e9c60e3cd34f0cf425e
 Content-Type: application/json
 
 {
@@ -17,7 +17,7 @@ Content-Type: application/json
     "password": "1am1ronman"
 }
 ###
-DELETE http://localhost:3000/user/6288502374f020c86f7e1692
+DELETE http://localhost:3000/user/62927e9c60e3cd34f0cf425e
 
 
 // Heroku Deployment
@@ -33,7 +33,7 @@ content-type: application/json
 GET https://recipe-book-cse341.herokuapp.com/user
 ###
 
-PUT http://recipe-book-cse341.herokuapp.com/user/6288502374f020c86f7e1692
+PUT http://recipe-book-cse341.herokuapp.com/user/62927e9c60e3cd34f0cf425e
 Content-Type: application/json
 
 {
@@ -41,4 +41,4 @@ Content-Type: application/json
     "password": "1am1ronman"
 }
 ###
-DELETE http://recipe-book-cse341.herokuapp.com/user/6288502374f020c86f7e1692
+DELETE http://recipe-book-cse341.herokuapp.com/user/62927e9c60e3cd34f0cf425e

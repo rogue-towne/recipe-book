@@ -22,3 +22,8 @@ app.use('/', router)
 const swaggerUI = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
 app.use('/api-docs',swaggerUI.serve, swaggerUI.setup(swaggerDocument))
+
+// Catch all
+process.on('uncaughtException', (err, origin) => {
+    console.log(process.stderr.fd, `Caught exception: ${err}\n` + `Exception origin: ${origin}`);
+  });
