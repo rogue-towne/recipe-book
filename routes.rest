@@ -1,3 +1,4 @@
+//Local
 POST http://localhost:3000/user
 content-type: application/json
 
@@ -8,6 +9,19 @@ content-type: application/json
 ###
 GET http://localhost:3000/user
 ###
+PUT http://localhost:3000/user/62918798dd40c51aac3fdea9
+Content-Type: application/json
+
+{
+    "username": "tstark",
+    "password": "1am1ronman"
+}
+###
+DELETE http://localhost:3000/user/6288502374f020c86f7e1692
+
+
+// Heroku Deployment
+###
 POST https://recipe-book-cse341.herokuapp.com/user
 content-type: application/json
 
@@ -17,3 +31,14 @@ content-type: application/json
 }
 ###
 GET https://recipe-book-cse341.herokuapp.com/user
+###
+
+PUT http://recipe-book-cse341.herokuapp.com/user/6288502374f020c86f7e1692
+Content-Type: application/json
+
+{
+    "username": "tstark",
+    "password": "1am1ronman"
+}
+###
+DELETE http://recipe-book-cse341.herokuapp.com/user/6288502374f020c86f7e1692
