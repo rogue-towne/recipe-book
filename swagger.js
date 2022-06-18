@@ -2,8 +2,8 @@ const swaggerAutogen = require('swagger-autogen')();
 
 const doc = {
   info: {
-    title: 'User Api',
-    description: 'Includes account information such as Username and Password for users.',
+    title: 'Recipe Book Api Documentation',
+    description: 'Includes api information for users and recipes ',
   },
   host: 'recipe-book-cse341.herokuapp.com',
   schemes: ['https']

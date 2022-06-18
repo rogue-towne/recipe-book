@@ -16,7 +16,14 @@ const User = require('../models/user')
 //         res.status(400).json({message: err.message})
 //     }
 //   })
-
+/**
+ * @swagger
+ * tags:
+ * name: User
+ * /user:
+ * get:
+ * tags: [User]
+ */
 // Retrieve all users
 router.get('/', async (req, res) => {
 try {
