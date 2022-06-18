@@ -35,27 +35,27 @@ router.get('/', async (req, res) => {
 })
 
 // Modify a recipe
-router.put('/:id', requiresAuth(), getRecipe, async (req, res) => {
+router.put('/:id',  getRecipe, async (req, res) => {
     if (req.body.name != null){
-        res.user.name = req.body.name
+        res.recipe.name = req.body.name
     }
     if (req.body.type != null){
-      res.user.type = req.body.type
+      res.recipe.type = req.body.type
     }
     if (req.body.description != null){
-        res.user.description = req.body.description
+        res.recipe.description = req.body.description
       }
     if (req.body.author != null){
-    res.user.author = req.body.author
+    res.recipe.author = req.body.author
     }
     if (req.body.servings != null){
-    res.user.servings = req.body.servings
+    res.recipe.servings = req.body.servings
     }
     if (req.body.ingredienets != null){
-    res.user.ingredienets = req.body.ingredienets
+    res.recipe.ingredienets = req.body.ingredienets
     }
     if (req.body.directions != null){
-    res.user.directions = req.body.directions
+    res.recipe.directions = req.body.directions
     }
     try {
         const updatedRecipe = await res.recipe.save()
