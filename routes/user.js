@@ -1,21 +1,23 @@
 const express = require('express')
 const router = express.Router()
 const User = require('../models/user')
+const { requiresAuth } = require('express-openid-connect');
 
-//Create a User
-router.post('/', async (req, res) => {
-    const user = new User({
-        username: req.body.username,
-        password: req.body.password
-    })
+// //Create a User
+// router.post('/', async (req, res) => {
+//     const user = new User({
+//         email: req.body.email,
+//         password: req.body.password
+//     })
   
-    try {
-        const newUser = await user.save()
-        res.status(201).json(newUser)
-    } catch (err){
-        res.status(400).json({message: err.message})
-    }
-  })
+//     try {
+//         const newUser = await user.save()
+//         res.status(201).json(newUser)
+//     } catch (err){
+//         res.status(400).json({message: err.message})
+//     }
+//   })
+
 // Retrieve all users
 router.get('/', async (req, res) => {
 try {
@@ -25,10 +27,11 @@ try {
     res.status(500).json({ message: err.message})
 }
 })
+
 // Modify a user
 router.put('/:id', getUser, async (req, res) => {
-    if (req.body.username != null){
-        res.user.username = req.body.username
+    if (req.body.email != null){
+        res.user.email = req.body.email
     }
     if (req.body.password != null){
       res.user.password = req.body.password
