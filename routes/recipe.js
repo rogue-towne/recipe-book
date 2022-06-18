@@ -5,7 +5,6 @@ const { requiresAuth } = require('express-openid-connect');
 
 //Create a Recipe
 router.post('/',  requiresAuth(), async (req, res) => {
-    res.send(JSON.stringify(req.oidc.user))
     const recipe = new recipe({
         name: req.body.name,
         type: req.body.type,
@@ -35,7 +34,6 @@ router.get('/', async (req, res) => {
 
 // Modify a recipe
 router.put('/:id', requiresAuth(), getRecipe, async (req, res) => {
-    res.send(JSON.stringify(req.oidc.user))
     if (req.body.name != null){
         res.user.name = req.body.name
     }
@@ -67,7 +65,6 @@ router.put('/:id', requiresAuth(), getRecipe, async (req, res) => {
 
 //Delete A Recipe
 router.delete('/:id', requiresAuth(), getRecipe, async (req, res) => {
-    res.send(JSON.stringify(req.oidc.user))
     try {
         await res.recipe.remove()
         res.json({message: "Deleted Recipe"})
