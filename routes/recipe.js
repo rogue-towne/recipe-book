@@ -18,6 +18,8 @@ router.post('/',  requiresAuth(), async (req, res) => {
         const newRecipe = await recipe.save()
         res.status(201).json(newRecipe)
     } catch (err){
+        res.status(401).json({message: err.message})
+        res.status(503).json({message: err.message})
         res.status(400).json({message: err.message})
     }
   })
@@ -59,6 +61,7 @@ router.put('/:id', requiresAuth(), getRecipe, async (req, res) => {
         const updatedRecipe = await res.recipe.save()
         res.json(updatedRecipe)
     } catch (err){
+        res.status(401).json({message: err.message})
         res.status(400).json({message: err.message})
     }
   })
@@ -69,6 +72,7 @@ router.delete('/:id', requiresAuth(), getRecipe, async (req, res) => {
         await res.recipe.remove()
         res.json({message: "Deleted Recipe"})
     } catch (err) {
+        res.status(401).json({message: err.message})
         res.status(500).json({message: err.message})
     }
     })
