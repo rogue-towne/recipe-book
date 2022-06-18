@@ -5,14 +5,14 @@ const { requiresAuth } = require('express-openid-connect');
 
 //Create a Recipe
 router.post('/',  requiresAuth(), async (req, res) => {
-    const recipe = new recipe({
+    const recipe = new Recipe({
         name: req.body.name,
         type: req.body.type,
         description: req.body.description,
         author: req.body.author,
         servings: req.body.servings,
         ingredients: req.body.ingredients,
-        directions: req.body.ingredienets
+        directions: req.body.directions
     })
     try {
         const newRecipe = await recipe.save()

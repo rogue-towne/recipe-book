@@ -42,4 +42,111 @@ Content-Type: application/json
 }
 ###
 DELETE http://recipe-book-cse341.herokuapp.com/user/62927e9c60e3cd34f0cf425e
+###
+POST http://localhost:3000/recipe
+content-type: application/json
 
+{
+    "name": "Baked Chicken Alfredo",
+        "type": "Main Dish",
+        "description": "A quick and easy chicken alfredo baked casserole.",
+        "author": "hkopinions",
+        "servings": "10",
+        "ingredients": [
+            {
+                "name": "penne pasta", 
+                "value": "16",
+                "unit": "ounce",
+                "description": "1 package"
+            },
+            {   
+                "name": "butter",
+                "value": "1/2",
+                "unit": "cup"
+            },
+            {
+                "name": "minced garlic",
+                "value": "2",
+                "unit": "teaspoons"
+            },
+            {
+                "name": "cream cheese",
+                "value": "8",
+                "unit": "ounce",
+                "description": "1 package softened"
+            },
+            {
+                "name": "milk",
+                "value": "2",
+                "unit": "cups"
+            },
+            {
+                "name": "grated parmesian cheese",
+                "value": "6",
+                "unit": "ounces",
+                "description": "divided"
+            },
+            {
+                "name": "dried parsley",
+                "value": "2",
+                "unit": "teaspoons"
+            },
+            {
+                "name": "italian seasoning",
+                "value": "1",
+                "unit": "teaspoon"
+            },
+            {
+                "name": "salt",
+                "value": "1",
+                "unit": "teaspoon",
+                "description": "divided"
+            },
+            {
+                "name": "ground black pepper",
+                "value": "1/2",
+                "unit": "teaspoon"
+            },
+            {
+                "name": "olive oil",
+                "value": "1",
+                "unit": "teaspoon"
+            },
+            {
+                "name": "chicken breasts",
+                "value": "2",
+                "description": "patted dry"
+            },
+            {
+                "name": "garlic powder",
+                "value": "1/2",
+                "unit": "teaspoon"
+            }
+        ],
+        "directions": [
+            {
+                "step": "1",
+                "description": "Bring a large pot of lightly salted water to a boil; add penne and cook, stirring occasionally, until tender yet firm to the bite, about 11 minutes. Drain."
+            },
+            {
+                "step": "2",
+                "description": "Melt butter in a large saucepan over medium-high heat. Add minced garlic; saute until golden, about 30 seconds. Stir in cream cheese until smooth. Add milk; stir until there are no lumps. Lower heat to medium. Add 3/4 of the Parmesan cheese, parsley, Italian seasoning, 1/2 teaspoon salt, and black pepper. Simmer, stirring occasionally, until sauce is smooth, about 5 minutes. Remove from heat."
+            },
+            {
+                "step": "3",
+                "description": "Heat olive oil in a large skillet over low heat. Season chicken with 1/2 teaspoon salt and garlic powder on both sides. Cook chicken breasts until no longer pink in the center and an instant-read thermometer inserted into the center reads at least 165 degrees F (74 degrees C), about 6 minutes per side. Cut chicken into 1/2-inch cubes."
+            },
+            {
+                "step": "4",
+                "description": "Preheat oven to 375 degrees F (190 degrees C)."
+            },
+            {
+                "step": "5",
+                "description": "Butter bottom and sides of a 9x13-inch casserole dish. Cover bottom with a layer of pasta. Place half of the chicken cubes on top. Pour 1/2 of the sauce over the chicken. Repeat layering pasta, chicken, and sauce. Sprinkle top with remaining Parmesan cheese. Cover with aluminum foil."
+            },
+            {
+                "step": "6",
+                "description": "Bake in the preheated oven until sauce is bubbly, about 15 minutes. Remove aluminum foil and bake until cheese is golden, about 5 minutes more."
+            }
+        ]
+}
