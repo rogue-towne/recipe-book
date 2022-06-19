@@ -103,5 +103,38 @@
             }
         ]
         
+    },
+    "recipe2": {
+        "recipe": {
+            "name": "Basic Air Fryer Hot Dogs",
+            "type": "Main Dish",
+            "description": "Perfectly crisp hot dogs and toasted buns made in minutes with the help of your air fryer.",
+            "author": "Soup Loving Nicole",
+            "servings": "4",
+            "ingredients":[
+                {
+                    "name": "hot dog buns",
+                    "value": "4"
+                },
+                {
+                    "name": "hot dogs",
+                    "value": "4"
+                }
+            ],
+            "directions":[
+                {
+                    "step":"1",
+                    "description": "Preheat air fryer to 390 degrees F (200 degrees C)."
+                },
+                {
+                    "step": "2",
+                    "description": "Place buns in the basket of the air fryer and cook for 2 minutes. Remove buns to a plate."
+                },
+                {
+                    "step": "3",
+                    "description": "Place hot dogs in the basket of the air fryer and cook for 3 minutes. Transfer hot dogs to buns."
+                }
+            ]
     }
+}
 }
