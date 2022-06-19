@@ -18,8 +18,8 @@ app.use(auth(config));
 
 // req.isAuthenticated is provided from the auth router
 app.get('/', (req, res) => {
-  res.send(req.oidc.isAuthenticated() ? 'Logged in\nType /logout at the end of this URL, to logout.' :
-  'Logged out\nTo authenticate, type /login at the end of this URL.')
+  res.send(req.oidc.isAuthenticated() ? 'Logged in. Navigate to https://recipe-book-cse341.herokuapp.com/logout, to logout.' :
+  'Logged out. Navigate to https://recipe-book-cse341.herokuapp.com/login, to login.')
 });
 
 const port = process.env.PORT || 3000;
