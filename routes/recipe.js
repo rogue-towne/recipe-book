@@ -35,7 +35,7 @@ router.get('/', async (req, res) => {
 })
 
 // Modify a recipe
-router.put('/:id',  getRecipe, async (req, res) => {
+router.put('/:id', requiresAuth(), getRecipe, async (req, res) => {
     if (req.body.name != null){
         res.recipe.name = req.body.name
     }
