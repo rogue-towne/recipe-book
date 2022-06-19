@@ -18,9 +18,8 @@ app.use(auth(config));
 
 // req.isAuthenticated is provided from the auth router
 app.get('/', (req, res) => {
-  res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
-  res.send(
-    'To authenticate, type /login at the end of this URL.\nType /logout at the end of this URL, to logout.')
+  res.send(req.oidc.isAuthenticated() ? 'Logged in\nType /logout at the end of this URL, to logout.' :
+  'Logged out\nTo authenticate, type /login at the end of this URL.')
 });
 
 const port = process.env.PORT || 3000;

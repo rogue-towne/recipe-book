@@ -2,7 +2,6 @@ const swaggerAutogen = require('swagger-autogen')();
 
 const doc = {
   info: {
-    openapi: '3.0.0',
     title: 'Recipe Book Api Documentation',
     description: 'Includes api information for users and recipes ',
   },

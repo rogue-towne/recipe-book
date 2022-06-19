@@ -2,14 +2,6 @@ const express = require('express')
 const router = express.Router()
 const User = require('../models/user')
 
-/**
- * @swagger
- * tags:
- * name: User
- * /user:
- * get:
- * tags: [User]
- */
 // Retrieve all users
 router.get('/', async (req, res) => {
 try {
